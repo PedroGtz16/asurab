@@ -20,6 +20,7 @@ class MainActivity :AppCompatActivity(),AnkoLogger {
             //mNewActivityButton = find(R.id.activity_main_btn_new_activity) // findViewById using anko
 
             mNewActivityButton.setOnClickListener {
+                println("funciona")
                 startActivity<savingParse>()
             }
 

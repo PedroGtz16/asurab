@@ -1,6 +1,7 @@
 package com.example.itesogram
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
@@ -22,8 +23,8 @@ class savingParse : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        sendParse = find(R.id.buttonSendParse)
+        setContentView(R.layout.activity_savingparse)
+        sendParse =find(R.id.buttonSendParse)
         getParse = find(R.id.buttonGetParse)
         textToSend=find(R.id.parseSend)
         textToGet = find(R.id.mensajeParse)
@@ -33,7 +34,7 @@ class savingParse : AppCompatActivity() {
 
             doAsync {
                 val query = ParseQuery<ParseObject>("Tarea")
-                query.whereEqualTo("expedientes", "is703761")
+                query.whereEqualTo("expediente", "is703761")
                 query.addDescendingOrder("createdAt")
                 query.getFirstInBackground{obj, e->
                     if(e==null)
@@ -47,7 +48,7 @@ class savingParse : AppCompatActivity() {
         }
         //SEND PARSE
         sendParse.setOnClickListener{
-            val value = textToSend.toString()
+            val value = textToSend.text.toString()
             val studentObject = ParseObject("Tarea")
             studentObject.put("expediente","is703761")
             studentObject.put("valor",value)

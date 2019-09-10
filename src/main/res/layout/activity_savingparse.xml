@@ -14,7 +14,7 @@
         ></com.google.android.material.textfield.TextInputEditText>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSendParse"
-        android:text="button"
+        android:text="SendParse"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         ></com.google.android.material.textview.MaterialTextView>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonGetParse"
-        android:text="button get"
+        android:text="GetParse"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
